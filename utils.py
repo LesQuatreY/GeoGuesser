@@ -29,6 +29,11 @@ def get_distance(point_a, point_b): #distance en km entre deux coordonnées gps
     lat_b,lon_b = convertRad(point_b[0]),convertRad(point_b[1])
     return 6378*(math.pi/2 - math.asin( math.sin(lat_b) * math.sin(lat_a) + math.cos(lon_b - lon_a) * math.cos(lat_b) * math.cos(lat_a)))
 
+def get_city(lat, lon):
+    return requests.get(
+        "https://api-adresse.data.gouv.fr/reverse/?lon={}&lat={}".format(lon,lat)
+    ).json()["features"][0]["properties"]["city"]
+
 def rerun():
     import streamlit as st
     for key in st.session_state.keys():
