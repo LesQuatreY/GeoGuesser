@@ -3,7 +3,7 @@ import streamlit as st
 
 from map import Map
 from utils import (
-    get_list_communes, get_geoloc, get_distance, get_surface, rerun
+    get_list_communes, get_geoloc, get_distance, get_surface, get_city, rerun
     )
 from streamlit_folium import st_folium
 
@@ -49,8 +49,16 @@ def quizz_for_one_city(ville):
         mapper.circle(get_geoloc(ville), rayon=distance)
         st_folium(mapper.map(), returned_objects=[""], height=HEIGHT, width=WIDTH)
 
-    if distance<math.sqrt(get_surface(ville)/100)/2: score=0
-    else: score=distance - math.sqrt(get_surface(ville)/100)/2
+    if distance<math.sqrt(get_surface(ville)/100)/2: 
+        score=0
+    else: 
+        score=distance - math.sqrt(get_surface(ville)/100)/2
+        try:
+            st.error("Vous avez cliquer sur {}".format(get_city(
+                lat=st.session_state["user_point"][0], lon=st.session_state["user_point"][1]
+            )))
+        except:
+            pass
 
     distance = "{:.2f}km".format(distance) if distance>1 else "{:.0f}mètres".format(distance*1000)
 
@@ -63,9 +71,9 @@ def quizz_for_one_city(ville):
 if st.session_state["tour"]<nb_tour:
     tour = st.session_state["tour"]
     quizz_for_one_city(st.session_state["villes_a_placer"][tour])
-    st.session_state["tour"] += 1
     del st.session_state["user_point"]
     st.button("Tour suivant")
+    st.session_state["tour"] += 1
 else:
     st.metric("Score", round(st.session_state["score"],2))
     if st.button("Rejouer"): rerun()
