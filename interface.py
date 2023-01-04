@@ -16,11 +16,14 @@ st.title("GeoGuesser")
 
 #Paramètres
 HEIGHT=500
-WIDTH=500
+WIDTH=500*2
 
 #Choix de l'utilisateur
 nb_tour = int(st.sidebar.text_input("Nombre de tours ?", value=0))
-if nb_tour==0: st.stop()
+st.warning("L'objectif est d'obtenir le plus petit score possible.")
+if nb_tour==0: 
+    st.write("Sélectionner un nombre de tours dans la barre latérale à gauche.")
+    st.stop()
 
 #Initialisation
 if not "villes_a_placer" in st.session_state:
@@ -51,14 +54,15 @@ def quizz_for_one_city(ville):
 
     if distance<math.sqrt(get_surface(ville)/100)/2: 
         score=0
+        st.success("Bravo, vous avez bien placé votre point sur {}.".format(ville))
     else: 
         score=distance - math.sqrt(get_surface(ville)/100)/2
-        try:
-            st.error("Vous avez cliquer sur {}".format(get_city(
-                lat=st.session_state["user_point"][0], lon=st.session_state["user_point"][1]
-            )))
-        except:
-            pass
+        # try:
+        #     st.error("Vous avez cliquer sur {}".format(get_city(
+        #         lat=st.session_state["user_point"][0], lon=st.session_state["user_point"][1]
+        #     )))
+        # except:
+        #     pass
 
     distance = "{:.2f}km".format(distance) if distance>1 else "{:.0f}mètres".format(distance*1000)
 
