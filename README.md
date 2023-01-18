@@ -1,7 +1,7 @@
 # GeoGuesser
 
 Ce projet est un jeu interactif qui permet à l'utilisateur de placer une ville (parmi les 100 villes les plus peuplées en France) sur une carte à l'aide de la bibliothèque Streamlit. Une fois le point placé, il calcule une erreur en fonction du point réel de la ville et génère un score.
-
+Voici une rapide présentation en vidéo du projet :
 [![GeoGuesser Video](https://img.youtube.com/vi/k4cllhwdnnQ/0.jpg)](https://www.youtube.com/watch?v=k4cllhwdnnQ)
 
 
