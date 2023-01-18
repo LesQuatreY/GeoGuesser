@@ -2,6 +2,8 @@
 
 Ce projet est un jeu interactif qui permet à l'utilisateur de placer une ville (parmi les 100 villes les plus peuplées en France) sur une carte à l'aide de la bibliothèque Streamlit. Une fois le point placé, il calcule une erreur en fonction du point réel de la ville et génère un score.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k4cllhwdnnQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Installation
 
 Pour utiliser ce projet, vous devrez d'abord installer les dépendances nécessaires en utilisant la commande `pip install -r requirements.txt`. Ensuite, vous pourrez lancer l'interface en utilisant la commande `streamlit run interface.py` pour commencer à jouer. 
