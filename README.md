@@ -4,7 +4,8 @@ Ce projet est un jeu interactif qui permet à l'utilisateur de placer une ville 
 
 ## Installation
 
-Pour utiliser ce projet, vous devrez d'abord installer les dépendances nécessaires en utilisant la commande `pip install -r requirements.txt`. Ensuite, vous pourrez lancer l'interface en utilisant la commande `streamlit run interface.py` pour commencer à jouer. Le jeu vous demandera de choisir une ville parmi les 100 villes les plus peuplées en France et de la placer sur la carte. Une fois que vous avez placé votre ville, le jeu calcule une erreur en fonction du point placé et génère un score. Vous pouvez continuer à jouer autant de fois que vous le souhaitez pour améliorer votre score.
+Pour utiliser ce projet, vous devrez d'abord installer les dépendances nécessaires en utilisant la commande `pip install -r requirements.txt`. Ensuite, vous pourrez lancer l'interface en utilisant la commande `streamlit run interface.py` pour commencer à jouer. 
+Le jeu vous demandera de choisir une ville parmi les 100 villes les plus peuplées en France et de la placer sur la carte. Une fois que vous avez placé votre ville, le jeu calcule une erreur en fonction du point placé et génère un score. Vous pouvez continuer à jouer autant de fois que vous le souhaitez pour améliorer votre score.
 
 ## Contribuer
 
