@@ -4,7 +4,6 @@ Ce projet est un jeu interactif qui permet à l'utilisateur de placer une ville 
 
 Voici une rapide présentation en vidéo du projet :
 
-
 [![GeoGuesser Video](https://img.youtube.com/vi/k4cllhwdnnQ/0.jpg)](https://www.youtube.com/watch?v=k4cllhwdnnQ)
 
 
