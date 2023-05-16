@@ -19,10 +19,8 @@ Si vous souhaitez contribuer à GeoGuesser, voici quelques idées d'amélioratio
 - Améliorer la comptabilité du score avec un meilleur affichage
 - Ajouter des fonctionnalités supplémentaires telles que des niveaux de difficulté ou des statistiques de jeu
 
-Si vous souhaitez soumettre des correctifs de bogues ou des nouvelles fonctionnalités, veuillez soumettre une demande de tirage en utilisant la plateforme GitHub de ce projet.
-
 ## Contact
 
-Si vous avez des questions ou des commentaires concernant ce projet, veuillez contacter l'auteur à l'adresse email suivante : tanguy.minot@laposte.net
+**Contact** : tanguy.minot@laposte.net
 
-**Note**: Le projet est versionné avec la date de dernière modification 2023-01-18.
+**Note** : Le projet est versionné avec la date de dernière modification 2023-01-18.
