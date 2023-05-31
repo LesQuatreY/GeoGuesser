@@ -1,5 +1,7 @@
 import requests
 
+import api_access
+
 def get_list_communes(top=100, nb_tour=20):
     import random
     return random.sample(
@@ -16,7 +18,10 @@ def get_surface(ville):
 
 def get_geoloc(ville):
     return list(requests.get(
-    "https://maps.googleapis.com/maps/api/geocode/json?address={}&key=AIzaSyDAcFLAXxWWAO42WtuT1l8Hq5az_nuZAV0".format(ville)
+    "https://maps.googleapis.com/maps/api/geocode/json?address={}&key={}".format(
+        ville,
+        api_access.google_api_key
+        )
     ).json()["results"][0]["geometry"]["location"].values())
 
 def convertRad(input): #Conversion des degrés en radian

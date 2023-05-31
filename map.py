@@ -2,7 +2,7 @@ import folium
 
 class Map:
   def __init__(self):
-    fond = r'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
+    fond = r'https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}' #'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
     self.carte = folium.Map(
       location=[46.5, 2.3],
       zoom_start=6, 
